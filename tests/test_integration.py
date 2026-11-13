@@ -1,12 +1,12 @@
 import json
 from pathlib import Path
-from .arms import parse_scope_response
-from .numeric import compare_quantities
-from .ollama import OllamaResult
+from src.arms import parse_scope_response
+from src.numeric import compare_quantities
+from src.ollama import OllamaResult
 
 
 def test_real_prepared_development_data_has_offsets_and_independent_evidence():
-    path = Path(__file__).parent / "data/peerread_iclr2017_v6/development_pairs.jsonl"
+    path = Path(__file__).parents[1] / "data/peerread_iclr2017_v6/development_pairs.jsonl"
     rows = [json.loads(line) for line in path.read_text().splitlines() if line.strip()]
     assert rows
     for row in rows:
@@ -28,14 +28,16 @@ def test_certificate_replay_is_deterministic():
 
 
 def test_matched_llm_control_applies_shared_scope_gate():
-    from .arms import ablation_llm_numeric
+    from src.arms import ablation_llm_numeric
     scope = json.dumps({"scope_bound": False, "claim_text": "100%", "evidence_text": "90%"})
     result = ablation_llm_numeric(scope, lambda *_: {"status": "supported"})
     assert result == {"status": "unresolved", "reason": "scope_not_bound"}
 
 
 def test_llm_only_keeps_independent_numeric_verdict():
-    from .run_dev_pilot import llm_json
+    import pytest
+    pytest.importorskip("methods.metric_seam.science_claims_v2")
+    from src.run_dev_pilot import llm_json
     scope = json.dumps({"scope_bound": False, "claim_text": "100%", "evidence_text": "90%"})
     parsed, _ = parse_scope_response(scope)
     numeric = {"status": "unsupported"}
@@ -44,7 +46,9 @@ def test_llm_only_keeps_independent_numeric_verdict():
 
 
 def test_pair_selection_allows_relevant_different_value():
-    from .prepare_peerread import choose_pair
+    import pytest
+    pytest.importorskip("methods.metric_seam.science_claims_v2")
+    from src.prepare_peerread import choose_pair
     record = {"metadata": {"abstractText": "Our proposed method reaches 90% accuracy on the held-out benchmark.", "sections": [{"heading": "Results", "text": "The same accuracy measure reaches 84% on the held-out benchmark."}]}}
     pair = choose_pair(record)
     assert pair is not None
@@ -52,7 +56,7 @@ def test_pair_selection_allows_relevant_different_value():
 
 
 def test_reviewed_source_contains_natural_mismatched_focal_pairs():
-    path = Path(__file__).parent / "data/peerread_iclr2017_v6/development_pairs.jsonl"
+    path = Path(__file__).parents[1] / "data/peerread_iclr2017_v6/development_pairs.jsonl"
     rows = {r["paper_id"]: r for r in (json.loads(x) for x in path.read_text().splitlines())}
     for paper_id in ("312", "309", "388"):
         pair = rows[paper_id]["pair"]

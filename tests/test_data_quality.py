@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 
-DATA = Path(__file__).parent / "data/peerread_iclr2017_v6"
+DATA = Path(__file__).parents[1] / "data/peerread_iclr2017_v6"
 
 
 def rows():
@@ -33,9 +33,9 @@ def test_decimal_ratio_and_duplicate_repairs():
     assert "3.65" in got["312"]["pair"]["claim_text"]
     assert got["785"]["pair"]["claim_text"].count("1/25") == 1
     assert got["785"]["pair"]["claim_text"] != got["785"]["pair"]["evidence_text"]
-    raw785 = json.loads((Path(__file__).parent / "data/peerread_iclr2017_v5/raw/785.pdf.json").read_text())
+    raw785 = json.loads((Path(__file__).parents[1] / "data/peerread_iclr2017_v5/raw/785.pdf.json").read_text())
     assert got["785"]["pair"]["evidence_text"] not in raw785["metadata"]["abstractText"]
-    assert got["709"]["pair"]["evidence_start"] > len(json.loads((Path(__file__).parent / "data/peerread_iclr2017_v5/raw/709.pdf.json").read_text())["metadata"]["abstractText"])
+    assert got["709"]["pair"]["evidence_start"] > len(json.loads((Path(__file__).parents[1] / "data/peerread_iclr2017_v5/raw/709.pdf.json").read_text())["metadata"]["abstractText"])
 
 
 def test_relevance_repairs_for_unrelated_cases():

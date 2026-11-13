@@ -1,6 +1,6 @@
 import json
-from .numeric import compare_quantities, verify_bound_quantity
-from .arms import parse_scope_response, hybrid
+from src.numeric import compare_quantities, verify_bound_quantity
+from src.arms import parse_scope_response, hybrid
 
 
 def test_ms_vs_seconds():

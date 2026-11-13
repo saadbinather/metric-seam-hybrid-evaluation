@@ -20,8 +20,7 @@ Model digest: `46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e`
 From the repository root:
 
 ```bash
-cd norm-research
-python3 -m pytest -q experiments/hybrid_numeric_seam/test_numeric.py experiments/hybrid_numeric_seam/test_integration.py experiments/hybrid_numeric_seam/test_data_quality.py
+python3 -m pytest -q tests/test_numeric.py tests/test_integration.py tests/test_data_quality.py
 ```
 
 Inference is not part of release reproduction. Score calculations use the saved `runs/heldout_frozen/HELDOUT_PREDICTIONS.csv` and `TIMINGS.csv`.
@@ -30,7 +29,16 @@ Inference is not part of release reproduction. Score calculations use the saved 
 
 Hybrid coverage was 5/40 (12.5%) versus 19/40 (47.5%) for matched LLM-numeric control. On 17 human-decidable cases, hybrid had 4 correct, 0 incorrect, and 13 abstentions; the control had 12 correct, 1 incorrect, and 4 abstentions. The primary paired table has 5 both-decided, 0 hybrid-only, 14 control-only, and 21 both-abstained cases. Its 15 output-state disagreements comprise 14 abstention differences and one decided-label difference on human-unresolved paper 512.
 
-See `FINAL_RESULTS.md`, `FINAL_RESULTS.csv`, `PROFESSOR_RESEARCH_MEMO.pdf`, and `FINAL_ANNOTATIONS_LOCK.json`.
+See `reports/FINAL_RESULTS.md`, `reports/FINAL_RESULTS.csv`, `reports/PROFESSOR_RESEARCH_MEMO.pdf`, and `annotations/FINAL_ANNOTATIONS_LOCK.json`.
+
+## Repository layout
+
+- `src/` — frozen experiment implementation and runners.
+- `tests/` — numeric, integration, and data-quality tests.
+- `data/` — dataset manifests, pairs, and source records.
+- `runs/` — saved pilot and frozen held-out artifacts.
+- `annotations/` — locked labels, reader provenance, and freeze manifests.
+- `reports/` — final results, memo, and data-quality report.
 
 ## Limitations
 
