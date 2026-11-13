@@ -1,46 +1,106 @@
-# Metric Seam Experiment 2
 
-## Question
+# Metric Seam: Hybrid Evaluation of Scientific Claims
 
-Does conservative numerical verification after shared LLM scope binding improve scientific-claim decisions, compared with LLM-only and a matched LLM-numeric control?
+An independent research pilot exploring the boundary between **LLM-based judgment and executable verification**, motivated by [Prof. Alexander Spangher's Metric Seam project](https://www.alexander-spangher.com/wishlist.html).
 
-## Frozen setup
+## Overview
 
-The 40-paper reservation, prompts, model digest, predictions, certificates, annotations, and provenance are frozen. The four arms are:
+Can deterministic Python verification replace an LLM's numerical judgment without compromising evaluation fidelity?
 
-- `arm_a_llm_only`: LLM scope binding plus LLM numeric judgment.
-- `arm_b_code_only_native`: corrected-verifier code-only secondary comparator.
-- `arm_c_hybrid`: LLM scope binding plus deterministic numeric verification.
-- `arm_d_llm_numeric`: matched LLM-numeric control using shared scope decisions/source spans.
+We investigate this question through scientific claim verification: determining whether evidence in a research paper's body supports a numerical claim made in its abstract.
 
-Model digest: `46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e`.
+Our experiment compares a **hybrid evaluator** against a **matched LLM control**. Both receive identical source passages and share the same semantic scope decision. The only intended difference is how numerical equivalence is evaluated:
 
-## Reproduction and tests
+- **Hybrid:** LLM-based scope assessment + Python numerical verification.
+- **Matched LLM control:** Same scope assessment + LLM-based numerical judgment.
 
-From the repository root:
+Additional LLM-only and code-only baselines provide context.
 
-```bash
-python3 -m pytest -q tests/test_numeric.py tests/test_integration.py tests/test_data_quality.py
-```
+## Experimental Setup
 
-Inference is not part of release reproduction. Score calculations use the saved `runs/heldout_frozen/HELDOUT_PREDICTIONS.csv` and `TIMINGS.csv`.
+| Component | Configuration |
+|---|---|
+| Dataset | PeerRead (ICLR 2017) |
+| Development set | 8 claim–evidence pairs |
+| Held-out test set | 40 claim–evidence pairs |
+| LLM | Llama-3.1-8B-Instruct (Q4_K_M) |
+| Inference | Ollama, temperature 0 |
+| Verification | Python, unit normalization and numeric comparison |
+| Human evaluation | 40 audited cases; 12 independently double-reviewed |
+| Labels | Supported / Unsupported / Unresolved |
+
+All evaluation methods were frozen before held-out analysis. The human labels and model predictions were kept separate until annotation reconciliation and adjudication were complete.
 
 ## Results
 
-Hybrid coverage was 5/40 (12.5%) versus 19/40 (47.5%) for matched LLM-numeric control. On 17 human-decidable cases, hybrid had 4 correct, 0 incorrect, and 13 abstentions; the control had 12 correct, 1 incorrect, and 4 abstentions. The primary paired table has 5 both-decided, 0 hybrid-only, 14 control-only, and 21 both-abstained cases. Its 15 output-state disagreements comprise 14 abstention differences and one decided-label difference on human-unresolved paper 512.
+| Method | Verdicts / 40 | Correct / 17 | Incorrect / 17 | Abstained / 17 |
+|---|---:|---:|---:|---:|
+| Hybrid (Python verifier) | 5 | 4 | 0 | 13 |
+| Matched LLM control | 19 | 12 | 1 | 4 |
 
-See `reports/FINAL_RESULTS.md`, `reports/FINAL_RESULTS.csv`, `reports/PROFESSOR_RESEARCH_MEMO.pdf`, and `annotations/FINAL_ANNOTATIONS_LOCK.json`.
+**Key findings:**
 
-## Repository layout
+- Replacing the LLM's numerical judgment with Python reduced verdict coverage from **47.5% to 12.5%**.
+- In 14 cases, the matched LLM control returned a verdict while the hybrid abstained.
+- The methods produced different definite verdicts in one case (paper 512), which human annotators marked unresolved.
+- Among human-decidable cases, the hybrid made no observed incorrect definite predictions, but answered only 4 of 17.
+- The low overlap in decided cases prevents a reliable claim of improved accuracy.
 
-- `src/` — frozen experiment implementation and runners.
-- `tests/` — numeric, integration, and data-quality tests.
-- `data/` — dataset manifests, pairs, and source records.
-- `runs/` — saved pilot and frozen held-out artifacts.
-- `annotations/` — locked labels, reader provenance, and freeze manifests.
-- `reports/` — final results, memo, and data-quality report.
+These findings highlight a trade-off between **conservative executable verification and decision coverage**.
+
+## Human Evaluation
+
+Of the 40 held-out cases:
+
+| Human label | Count |
+|---|---:|
+| Supported | 14 |
+| Unsupported | 3 |
+| Unresolved | 23 |
+
+Two reviewers independently assessed a prespecified 12-case subset, agreeing on 11 of 12 cases before adjudication (Cohen's κ = 0.833).
+
+Disagreements were resolved before revealing model predictions.
+
+## Reproducibility
+
+The experiment used a frozen dataset reservation, fixed prompts, deterministic sampling, and logged model responses.
+
+**Model:** `llama3.1:8b-instruct-q4_K_M`
+
+**Model digest:**
+`46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e`
+
+**Frozen reservation SHA-256:**
+`be71cbac318b479b1fda8dde45192254fbe15c750daf3c1bec47091bd0ad2b32`
+
+The evaluation includes executable verification certificates, source-span provenance, and timing records.
+
+See the accompanying reports for methodological details and complete results.
+
+## Reports
+
+- [Full Experimental Results](reports/FINAL_RESULTS.md)
+- [Professor-Facing Research Memo](reports/PROFESSOR_RESEARCH_MEMO.pdf)
 
 ## Limitations
 
-There are 23/40 human-unresolved labels, low hybrid coverage, and only four human-decidable jointly decided pairs. The frozen pilot cannot prove or reject the original `<10% harmful-error` hypothesis or establish generalization beyond this reservation.
+This is a small-scale exploratory pilot, not a definitive benchmark.
 
+Only 17 of 40 examples received human-decidable labels, and the hybrid returned a verdict on just five examples. Consequently, paired accuracy comparisons are underpowered, and the experiment cannot establish the originally proposed harmful-error threshold.
+
+The findings describe this frozen evaluation and should not be generalized to other datasets, models, or evaluation domains without further experiments.
+
+## Research Context
+
+This pilot was independently conducted in response to **Experiment 2: Hybrid Evaluation** from Prof. Alexander Spangher's [Metric Seam research wishlist](https://www.alexander-spangher.com/wishlist.html).
+
+The broader project investigates which components of preference metrics can be expressed as executable code and which require articulated, model-based judgments.
+
+**Upstream research code:** [alex2awesome/norm-research](https://github.com/alex2awesome/norm-research/tree/main/methods/metric_seam)
+
+This repository represents an independent exploratory contribution and is not an official release of the upstream project.
+
+## Acknowledgment
+
+Research direction inspired by Prof. Alexander Spangher's publicly available Metric Seam project description and accompanying research code.
