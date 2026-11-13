@@ -1,0 +1,164 @@
+[
+  {
+    "paper_id": "407",
+    "source_file": "407.pdf.json",
+    "title": "TRANSFER FROM MULTIPLE SOURCES IN THE SAME DOMAIN",
+    "pair": null
+  },
+  {
+    "paper_id": "606",
+    "source_file": "606.pdf.json",
+    "title": "LEARNING APPROXIMATE DISTRIBUTION-SENSITIVE DATA STRUCTURES",
+    "pair": null
+  },
+  {
+    "paper_id": "513",
+    "source_file": "513.pdf.json",
+    "title": null,
+    "pair": null
+  },
+  {
+    "paper_id": "718",
+    "source_file": "718.pdf.json",
+    "title": "MULTIAGENT SYSTEM FOR LAYER FREE NETWORK",
+    "pair": null
+  },
+  {
+    "paper_id": "661",
+    "source_file": "661.pdf.json",
+    "title": "NEURAL GRAPH MACHINES: LEARNING NEURAL NETWORKS USING GRAPHS",
+    "pair": null
+  },
+  {
+    "paper_id": "360",
+    "source_file": "360.pdf.json",
+    "title": "GENERALIZING SKILLS WITH SEMI-SUPERVISED REINFORCEMENT LEARNING",
+    "pair": null
+  },
+  {
+    "paper_id": "545",
+    "source_file": "545.pdf.json",
+    "title": null,
+    "pair": null
+  },
+  {
+    "paper_id": "623",
+    "source_file": "623.pdf.json",
+    "title": null,
+    "pair": null
+  },
+  {
+    "paper_id": "548",
+    "source_file": "548.pdf.json",
+    "title": "CHARGED POINT NORMALIZATION AN EFFICIENT SOLUTION TO THE SADDLE POINT PROBLEM",
+    "pair": null
+  },
+  {
+    "paper_id": "520",
+    "source_file": "520.pdf.json",
+    "title": null,
+    "pair": null
+  },
+  {
+    "paper_id": "582",
+    "source_file": "582.pdf.json",
+    "title": "FOR THE TASK OF PRODUCT RECOMMENDATION",
+    "pair": null
+  },
+  {
+    "paper_id": "424",
+    "source_file": "424.pdf.json",
+    "title": null,
+    "pair": null
+  },
+  {
+    "paper_id": "625",
+    "source_file": "625.pdf.json",
+    "title": "COMMUNICATING HIERARCHICAL NEURAL CONTROLLERS FOR LEARNING ZERO-SHOT TASK GENERALIZATION",
+    "pair": null
+  },
+  {
+    "paper_id": "499",
+    "source_file": "499.pdf.json",
+    "title": null,
+    "pair": null
+  },
+  {
+    "paper_id": "780",
+    "source_file": "780.pdf.json",
+    "title": null,
+    "pair": null
+  },
+  {
+    "paper_id": "411",
+    "source_file": "411.pdf.json",
+    "title": null,
+    "pair": null
+  },
+  {
+    "paper_id": "573",
+    "source_file": "573.pdf.json",
+    "title": "TOWARDS INFORMATION-SEEKING AGENTS",
+    "pair": null
+  },
+  {
+    "paper_id": "610",
+    "source_file": "610.pdf.json",
+    "title": null,
+    "pair": null
+  },
+  {
+    "paper_id": "607",
+    "source_file": "607.pdf.json",
+    "title": "MEMORY-AUGMENTED ATTENTION MODELLING FOR VIDEOS",
+    "pair": null
+  },
+  {
+    "paper_id": "408",
+    "source_file": "408.pdf.json",
+    "title": "MULTI-VIEW RECURRENT NEURAL ACOUSTIC WORD EMBEDDINGS",
+    "pair": null
+  },
+  {
+    "paper_id": "504",
+    "source_file": "504.pdf.json",
+    "title": null,
+    "pair": null
+  },
+  {
+    "paper_id": "555",
+    "source_file": "555.pdf.json",
+    "title": null,
+    "pair": null
+  },
+  {
+    "paper_id": "651",
+    "source_file": "651.pdf.json",
+    "title": null,
+    "pair": null
+  },
+  {
+    "paper_id": "761",
+    "source_file": "761.pdf.json",
+    "title": null,
+    "pair": null
+  },
+  {
+    "paper_id": "550",
+    "source_file": "550.pdf.json",
+    "title": null,
+    "pair": null
+  },
+  {
+    "paper_id": "418",
+    "source_file": "418.pdf.json",
+    "title": "UNROLLED GENERATIVE ADVERSARIAL NETWORKS",
+    "pair": null
+  },
+  {
+    "paper_id": "528",
+    "source_file": "528.pdf.json",
+    "title": "NEURAL FUNCTIONAL PROGRAMMING",
+    "pair": null
+  }
+]

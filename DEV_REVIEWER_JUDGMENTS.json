@@ -1,0 +1,15 @@
+{
+  "reviewer": "user",
+  "status": "user_provided_reviewer_judgments_not_independent_ground_truth",
+  "reserved_test_model_calls": 0,
+  "labels": {
+    "312": "unsupported",
+    "709": "supported",
+    "617": "supported",
+    "309": "unsupported",
+    "785": "supported",
+    "596": "supported",
+    "388": "unresolved",
+    "552": "supported"
+  }
+}

@@ -1,0 +1,13 @@
+paper_id,human_verdict,human_reason,label_source
+737,unresolved,"Evidence justifies the 1x1-filter design choice (9x fewer params than 3x3), but never speaks to the overall 50x parameter reduction claimed",/Users/apple/Desktop/hybrid_llm_code_eval/SECOND_READER_12_COMPLETED_LABELS.csv
+619,supported,"Evidence names the same 20-layer network escaping bad initialization on MNIST that the claim describes",/Users/apple/Desktop/hybrid_llm_code_eval/SECOND_READER_12_COMPLETED_LABELS.csv
+512,unresolved,"Evidence is just a chart/axis description; no sentence states a 15% (or any specific) relative improvement",/Users/apple/Desktop/hybrid_llm_code_eval/SECOND_READER_12_COMPLETED_LABELS.csv
+740,unresolved,"Evidence gives per-node hardware specs (cores, RAM, disk), not the 128-processor cluster scale claimed",/Users/apple/Desktop/hybrid_llm_code_eval/SECOND_READER_12_COMPLETED_LABELS.csv
+754,supported,"41M lines of Python code from GitHub is stated identically in both claim and evidence",/Users/apple/Desktop/hybrid_llm_code_eval/SECOND_READER_12_COMPLETED_LABELS.csv
+668,supported,"The same list of 6 benchmarks appears in both",/Users/apple/Desktop/hybrid_llm_code_eval/SECOND_READER_12_COMPLETED_LABELS.csv
+644,unresolved,"Evidence is a diversity-term equation/constraint; it does not confirm top-1 solution quality improvements",/Users/apple/Desktop/hybrid_llm_code_eval/SECOND_READER_12_COMPLETED_LABELS.csv
+452,supported,"Atari 2600 domain is referenced identically in claim and evidence",/Users/apple/Desktop/hybrid_llm_code_eval/SECOND_READER_12_COMPLETED_LABELS.csv
+578,supported,"9 types of transforms is stated identically in both",/Users/apple/Desktop/hybrid_llm_code_eval/SECOND_READER_12_COMPLETED_LABELS.csv
+469,unresolved,"Evidence lists per-processor speedups matching the claimed range endpoints, but the excerpted number alone does not capture the full range",/Users/apple/Desktop/hybrid_llm_code_eval/SECOND_READER_12_COMPLETED_LABELS.csv
+395,supported,"35x speedup over Stan is stated identically in both",/Users/apple/Desktop/hybrid_llm_code_eval/SECOND_READER_12_COMPLETED_LABELS.csv
+558,unresolved,"Evidence is only a section heading; no text confirms the two-part claim",/Users/apple/Desktop/hybrid_llm_code_eval/SECOND_READER_12_COMPLETED_LABELS.csv

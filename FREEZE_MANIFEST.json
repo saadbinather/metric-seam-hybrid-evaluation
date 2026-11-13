@@ -1,0 +1,27 @@
+{
+  "heldout_model_calls": 0,
+  "human_labels_locked": false,
+  "model": "llama3.1:8b-instruct-q4_K_M",
+  "model_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "numeric_tolerance": 0.0,
+  "prediction_artifact": "not_created",
+  "prompts": {
+    "numeric_system": "You are a conservative numerical equivalence judge. Return JSON only. Compare the supplied quantities and their experimental scope; abstain when units or scope are missing/incompatible.",
+    "scope_system": "You bind an abstract scientific numerical claim to the supplied body evidence. Return JSON only. Do not infer missing facts."
+  },
+  "relaxed_ablation_tolerance": 0.005,
+  "reservation": "data/peerread_iclr2017_v7_a/dataset_manifest.json",
+  "reservation_manifest_sha256": "be71cbac318b479b1fda8dde45192254fbe15c750daf3c1bec47091bd0ad2b32",
+  "schema": "hybrid-numeric-seam-freeze-v1",
+  "source_hashes": {
+    "DEV_PROVISIONAL_LABELS.json": "a183839d99cfc4c4076e088cd1b8d67271d6570bebcad0848c41a45bdf08d6a4",
+    "DEV_REVIEWER_JUDGMENTS.json": "b3e9d71a18f93e6e66e4ff49fe979b0966f33754fa78b2446074036eef5e370d",
+    "arms.py": "244f6060a1cce9e8c707e1ab16d8304f531ea8470ba730d6cac41d0b768c71f0",
+    "numeric.py": "4ddd947c756f92a53c886fdade476cada2e2139a2fc998777cebe42807758d41",
+    "ollama.py": "ee9891ab6bcc3d518789de86668e48cf041c90b5dadade134acda8b8d9e6d16a",
+    "run_dev_pilot.py": "78635bc76cd4c556a1f95fe68a52046f4ab44eedd7ee52d0777912f3a74d0480"
+  },
+  "status": "development-frozen-heldout-blocked-pending-human-labels",
+  "temperature": 0.0,
+  "v6_dev_pairs": "data/peerread_iclr2017_v6/development_pairs.jsonl"
+}

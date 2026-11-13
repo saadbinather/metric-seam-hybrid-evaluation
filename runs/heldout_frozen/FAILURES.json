@@ -1,0 +1,131 @@
+{
+  "count": 21,
+  "failures": [
+    {
+      "paper_id": "737",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "unsupported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "740",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "supported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "644",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "unsupported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "578",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "supported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "631",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "unsupported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "546",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "supported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "613",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "unsupported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "521",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "supported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "320",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "unsupported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "569",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "unsupported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "714",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "unsupported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "762",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "supported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "353",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "unsupported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "601",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "supported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "483",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "supported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "527",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "supported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "479",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "supported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "675",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "unsupported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "381",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "supported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "716",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "unsupported",
+      "arm_d_llm_numeric": "unresolved"
+    },
+    {
+      "paper_id": "665",
+      "scope_parse_error": "",
+      "arm_a_llm_only": "unsupported",
+      "arm_d_llm_numeric": "unresolved"
+    }
+  ]
+}

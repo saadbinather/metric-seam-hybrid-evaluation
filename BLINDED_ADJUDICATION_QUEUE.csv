@@ -1,0 +1,2 @@
+paper_id,reader1_verdict,reader2_verdict,disagreement_status,adjudicated_verdict,adjudicator_reason
+469,supported,unresolved,RESOLVED,supported,"The paper abstract independently states 3.1–7.3x convolution speedups over dense convolution in AlexNet across Intel Atom, Xeon, and Xeon Phi; this directly confirms the claim's numeric range and scope."

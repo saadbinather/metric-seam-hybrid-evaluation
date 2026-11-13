@@ -1,0 +1,37 @@
+{
+  "schema": "metric-seam-experiment-2-annotation-reconciliation-v1",
+  "status": "blocked_pending_genuine_human_labels",
+  "model_rerun": false,
+  "heldout_predictions_accessed": false,
+  "original_workbook_preserved": true,
+  "original_workbook_sha256": "ca690e83ddac87605a138cecb747b1c1b599fab8b7a25a2c1408cf6a32788ad1",
+  "original_reader1": {
+    "path": "HELDOUT_READER1_LABELS.csv",
+    "sha256": "84528c89845ce5c3753dfe0cd0bcf24d5eabcd4b4422e9ad454a4d1961db31be",
+    "row_count": 40,
+    "contains_id_361": true,
+    "contains_id_336": false
+  },
+  "second_reader": {
+    "path": "HELDOUT_SECOND_READER_12_BLINDED.csv",
+    "sha256": "da00ffccb700f994c5c4262d11206d321d53b6781efe35ca1d029550668e5869",
+    "prespecified_ids_exact": true,
+    "completed": false,
+    "nonblank_verdicts": 0
+  },
+  "mismatch": {
+    "missing_id": "336",
+    "extra_id": "361",
+    "extra_id_action": "excluded_from_frozen_reservation",
+    "repair_row": "FIRST_READER_MISMATCH_REPAIR.csv",
+    "repair_label_status": "pending_genuine_human_label"
+  },
+  "agreement": {
+    "status": "not_calculated",
+    "reason": "completed second-reader labels unavailable"
+  },
+  "final_report": {
+    "path": "ANNOTATION_FINAL_REPORT.md",
+    "status": "not_created_before_label_lock"
+  }
+}

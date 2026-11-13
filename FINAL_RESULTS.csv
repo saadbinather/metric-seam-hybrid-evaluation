@@ -1,0 +1,5 @@
+arm,cases,decisions,coverage,abstentions,human_decidable_cases,correct,accuracy,accuracy_ci_95
+arm_a_llm_only,40,40,1.000,0,17,14,0.8235,"[0.5897,0.9381]"
+arm_b_code_only_native,40,8,0.200,32,8,8,1.0000,"[0.6756,1.0000]"
+arm_c_hybrid,40,5,0.125,35,4,4,1.0000,"[0.5101,1.0000]"
+arm_d_llm_numeric,40,19,0.475,21,13,12,0.9231,"[0.6669,0.9863]"

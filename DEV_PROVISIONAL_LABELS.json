@@ -1,0 +1,15 @@
+{
+  "label_status": "provisional_ai_assisted_not_independent_human_ground_truth",
+  "source": "user-provided provisional review",
+  "reserved_test_model_calls": 0,
+  "labels": {
+    "312": "supported",
+    "709": "supported",
+    "617": "supported",
+    "785": "supported",
+    "596": "supported",
+    "388": "supported",
+    "552": "supported",
+    "309": "unresolved"
+  }
+}

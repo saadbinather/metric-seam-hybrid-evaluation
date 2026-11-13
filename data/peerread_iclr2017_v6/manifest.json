@@ -1,0 +1,17 @@
+{
+  "schema": "hybrid-numeric-seam-dev-v4",
+  "source": "PeerRead ICLR2017 train parsed_pdfs",
+  "paper_ids": [
+    "312",
+    "709",
+    "617",
+    "309",
+    "785",
+    "596",
+    "388",
+    "552"
+  ],
+  "reserved_read": false,
+  "reserved_model_calls": 0,
+  "sampling": "same eight previously inspected development IDs; no reserved IDs opened"
+}

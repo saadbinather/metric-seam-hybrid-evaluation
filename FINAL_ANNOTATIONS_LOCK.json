@@ -1,0 +1,17 @@
+{
+  "schema": "metric-seam-final-annotations-lock-v1",
+  "locked_at": "2026-11-13",
+  "model_rerun": false,
+  "predictions_modified": false,
+  "final_ids_count": 40,
+  "final_ids_source": "HELDOUT_READER1_LABELS.csv with 361 excluded and genuine 336 repair label added",
+  "final_label_counts": {"supported": 14, "unsupported": 3, "unresolved": 23},
+  "original_reader1_sha256": "84528c89845ce5c3753dfe0cd0bcf24d5eabcd4b4422e9ad454a4d1961db31be",
+  "repair_label_sha256": "cb2f68fc1935390382e3848652ec7b65ec75b1f703b80a20b3671e44b27c468c",
+  "original_second_reader_template_sha256": "da00ffccb700f994c5c4262d11206d321d53b6781efe35ca1d029550668e5869",
+  "completed_second_reader_source_sha256": "854383b9e952bdaaf316a9fe94d68fe04b58715aca315bb183e67b8d95c062a4",
+  "adjudication_queue_sha256": "2b72e9f4a6becccd5a39622b2d5e6543bc1b37a8dadc7c207377b7f15228a1bf",
+  "reservation_manifest_sha256": "be71cbac318b479b1fda8dde45192254fbe15c750daf3c1bec47091bd0ad2b32",
+  "model_digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "adjudication": {"paper_id": "469", "status": "RESOLVED", "verdict": "supported"}
+}

@@ -1,0 +1,12 @@
+{
+  "ids_match_reservation": false,
+  "locked_at_utc": "2026-11-11T11:01:03.423475+00:00",
+  "model_calls": 0,
+  "reservation_manifest_sha256": "be71cbac318b479b1fda8dde45192254fbe15c750daf3c1bec47091bd0ad2b32",
+  "schema": "human-audit-workbook-lock-v1",
+  "second_reader_template": "experiments/hybrid_numeric_seam/HELDOUT_SECOND_READER_12_BLINDED.csv",
+  "second_reader_template_sha256": "da00ffccb700f994c5c4262d11206d321d53b6781efe35ca1d029550668e5869",
+  "xlsx_ids_count": 40,
+  "xlsx_path": "/Users/apple/Desktop/hybrid_llm_code_eval/human audit done.xlsx",
+  "xlsx_sha256": "ca690e83ddac87605a138cecb747b1c1b599fab8b7a25a2c1408cf6a32788ad1"
+}

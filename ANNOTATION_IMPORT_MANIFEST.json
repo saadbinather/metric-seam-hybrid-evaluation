@@ -1,0 +1,16 @@
+{
+  "schema": "metric-seam-annotation-import-v1",
+  "model_rerun": false,
+  "predictions_accessed": false,
+  "join_key": "paper_id",
+  "templates_preserved": true,
+  "sources": {
+    "first_reader_336": {"path": "/Users/apple/Desktop/hybrid_llm_code_eval/FIRST_READER_336_REPAIR_LABEL.csv", "sha256": "cb2f68fc1935390382e3848652ec7b65ec75b1f703b80a20b3671e44b27c468c"},
+    "second_reader_12": {"path": "/Users/apple/Desktop/hybrid_llm_code_eval/SECOND_READER_12_COMPLETED_LABELS.csv", "sha256": "854383b9e952bdaaf316a9fe94d68fe04b58715aca315bb183e67b8d95c062a4"}
+  },
+  "second_reader_ids_exact": true,
+  "second_reader_row_count": 12,
+  "agreement": {"matches": 11, "total": 12, "raw_agreement": 0.9166666666666666},
+  "disagreements": ["469"],
+  "label_lock": "pending_blinded_adjudication"
+}

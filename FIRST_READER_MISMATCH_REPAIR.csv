@@ -1,0 +1,3 @@
+paper_id,claim,evidence,focal_quantity,human_verdict,human_reason,annotation_status
+336,"1) We use a discretized logistic mixture likelihood on the pixels, rather than a 256-way softmax, which we find to speed up training.","2.1 DISCRETIZED LOGISTIC MIXTURE LIKELIHOOD
+The standard PixelCNN model specifies the conditional distribution of a sub-pixel, or color channel of a pixel, as a full 256-way softmax.","256 -> 256",,,"PENDING_GENUINE_HUMAN_LABEL"
